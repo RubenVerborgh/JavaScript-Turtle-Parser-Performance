@@ -20,7 +20,6 @@ if (/\.gz$/.test(filename))
   stream = stream.pipe(zlib.createGunzip());
 
 var store = {
-  count: 0,
   setPrefixForURI: function () { },
   sym: function (uri) {
     return { uri: uri };
@@ -30,7 +29,7 @@ var store = {
   },
   formula: function () {
     return {
-      add: function () { store.count++; },
+      add: function () { count++; },
     };
   },
 };
