@@ -6,7 +6,7 @@ var fs = require('fs'),
     zlib = require('zlib');
 
 if (process.argv.length !== 3)
-  return console.error('Usage: N3Parser-perf.js filename');
+  return console.error('Usage: n3-perf.js filename');
 
 var filename = path.resolve(process.cwd(), process.argv[2]),
     base = 'file://' + filename;
